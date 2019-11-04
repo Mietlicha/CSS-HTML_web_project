@@ -1,3 +1,8 @@
+:root{
+    --grey: rgb(71, 69, 69);
+    --greyHover:  rgb(235, 229, 229);
+}
+
 *{
     box-sizing: border-box;
 }
@@ -5,4 +10,77 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Dosis', sans-serif;
+    color: var(--grey);
+}
+
+/* nav ****************************************************/
+.main-nav{
+    width: 100%;
+    background-color: #efefef;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nav__brand{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.main-nav__item{
+    list-style-type: none;
+    display: flex;
+    font-size: 0.8rem;
+    padding: 0;
+}
+
+.main-nav__item li{
+    padding: 0.5rem 1rem;
+    min-width: 100px;
+    /* background-color: #fff; */
+}
+
+.main-nav__button{
+    margin: auto;
+    /* background-color: #fff; */
+    width: 10vw;
+    min-width: 100px;
+    border: 1px solid rgb(71, 69, 69);
+    border-radius: 5px;
+    padding: 0.3rem;
+    text-align: center;
+}
+
+.main-nav a{
+    color: var(--grey);
+    text-decoration: none;
+}
+
+.main-nav__item li:hover, .main-nav__button:hover{
+    background-color: var(--greyHover);
+    font-weight: bold;
+}
+
+@media(min-width:686px){
+    .main-nav{
+        padding: 1.5rem 3rem;
+    }
+    .main-nav__brand{
+        border-right: 3px solid rgb(124, 124, 124);
+        padding-right: 0.5rem;
+    }
+
+    .main-nav__item{
+        font-size: 1rem;
+        margin-left: 3rem;
+    }
+
+    .main-nav__button{
+        margin-left: auto;
+        margin-right: 0;
+    }
 }

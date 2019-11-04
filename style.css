@@ -29,12 +29,13 @@ body{
 .main-nav__brand{
     font-weight: 700;
     font-size: 1.2rem;
+    padding-right: 0.5rem;
 }
 
 .main-nav__item{
     list-style-type: none;
     display: flex;
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0;
 }
 
@@ -53,6 +54,7 @@ body{
     border-radius: 5px;
     padding: 0.3rem;
     text-align: center;
+    display: none;
 }
 
 .main-nav a{
@@ -67,20 +69,20 @@ body{
 
 @media(min-width:686px){
     .main-nav{
-        padding: 1.5rem 3rem;
+        padding: 0.5rem 2rem;
     }
     .main-nav__brand{
         border-right: 3px solid rgb(124, 124, 124);
-        padding-right: 0.5rem;
     }
 
     .main-nav__item{
-        font-size: 1rem;
+        /* font-size: 1rem; */
         margin-left: 3rem;
     }
 
     .main-nav__button{
         margin-left: auto;
         margin-right: 0;
+        display: block;
     }
 }

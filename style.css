@@ -67,6 +67,51 @@ body{
     font-weight: bold;
 }
 
+/*-- main content ---------------------------- */
+.header-section{
+    background: url("img/happy.jpg") no-repeat 50% 0%;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    grid-template-rows: 1.5fr 1fr;
+    grid-template-areas: "header"
+                         "content";
+}
+
+.header-section header{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    grid-area: header;
+    max-width: 678px;
+}
+
+.header-section header, .header-section h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+.header-section h2{
+    margin: 1rem 0;
+}
+
+
+.header-section h1{
+    grid-area: content;
+    font-family: 'Dancing Script', cursive;
+    padding: 0 0.5rem;
+    max-width: 622px;
+}
+@media(min-width:455px){
+    .header-section{
+        background-size: cover;
+}
+
 @media(min-width:686px){
     .main-nav{
         padding: 0.5rem 2rem;
@@ -85,4 +130,8 @@ body{
         margin-right: 0;
         display: block;
     }
+
+    .header-section{
+        background-size: cover;
+        background-position: 0% 30%;
 }

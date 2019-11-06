@@ -1,10 +1,12 @@
 :root{
     --grey: rgb(71, 69, 69);
     --greyHover:  rgb(235, 229, 229);
+    --greyHoverA:  rgb(204, 197, 197);
 }
 
 *{
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body{
@@ -59,7 +61,6 @@ body{
 
 .main-nav a{
     color: var(--grey);
-    text-decoration: none;
 }
 
 .main-nav__item li:hover, .main-nav__button:hover{
@@ -70,8 +71,8 @@ body{
 /*-- main content ---------------------------- */
 .header-section{
     background: url("img/happy.jpg") no-repeat 50% 0%;
+    height: calc(100vh - 109px);
     width: 100%;
-    height: fit-content;
     display: grid;
     text-align: center;
     color: #fff;
@@ -100,16 +101,80 @@ body{
     margin: 1rem 0;
 }
 
-
 .header-section h1{
     grid-area: content;
     font-family: 'Dancing Script', cursive;
     padding: 0 0.5rem;
     max-width: 622px;
 }
+
+.portfolio-section{
+    max-width: 800px;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem 0;
+}
+
+.portfolio-section div{
+    background-color: var(--greyHover);
+    margin: 0 0.5rem;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: background-color .2s ease-in-out;
+}
+
+.portfolio-section a{
+    color: var(--grey);
+}
+
+.portfolio-section div:hover{
+    background-color: var(--greyHoverA);
+}
+
 @media(min-width:455px){
     .header-section{
         background-size: cover;
+    }
+
+    .portfolio-section{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "a c c i"
+                             "p p h b";
+     }
+ 
+     .portfolio-section div{
+         min-height: 150px;
+     }
+     
+     .portfolio-section a:nth-child(1){
+         grid-area: a;
+     }
+     
+     .portfolio-section a:nth-child(2){
+         grid-area: c;
+     }
+ 
+     .portfolio-section a:nth-child(3){
+         grid-area: i;
+     }
+     
+     .portfolio-section a:nth-child(4){
+         grid-area: p;
+     }
+ 
+     .portfolio-section a:nth-child(5){
+         grid-area: h;
+     }
+     
+     .portfolio-section a:nth-child(6){
+         grid-area: b;
+     }
 }
 
 @media(min-width:686px){
@@ -134,4 +199,7 @@ body{
     .header-section{
         background-size: cover;
         background-position: 0% 30%;
+    }
+
+    
 }

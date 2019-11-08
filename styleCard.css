@@ -3,6 +3,7 @@
     --greyHover:  rgb(235, 229, 229);
     --greyHoverA:  rgb(204, 197, 197);
     --footer: rgb(27, 27, 27);
+    --footerCard: rgb(32, 92, 221);
 }
 
 *{
@@ -76,72 +77,7 @@ main{
 padding-top: 84px;
 }
 
-.header-section{
-    background: url("img/happy.jpg") no-repeat 50% 0%;
-    height: calc(100vh - 109px);
-    width: 100%;
-    display: grid;
-    text-align: center;
-    color: #fff;
-    text-shadow: 2px 2px 2px #000;
-    grid-template-rows: 1.5fr 1fr;
-    grid-template-areas: "header"
-                         "content";
-}
 
-.header-section header{
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    grid-area: header;
-    max-width: 678px;
-}
-
-.header-section header, .header-section h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-
-.header-section h2{
-    margin: 1rem 0;
-}
-
-.header-section h1{
-    grid-area: content;
-    font-family: 'Dancing Script', cursive;
-    padding: 0 0.5rem;
-    max-width: 622px;
-}
-
-.portfolio-section{
-    max-width: 800px;
-    margin: 1rem auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem 0;
-}
-
-.portfolio-section div{
-    background-color: var(--greyHover);
-    margin: 0 0.5rem;
-    min-height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: 500;
-    transition: background-color .2s ease-in-out;
-}
-
-.portfolio-section a{
-    color: var(--grey);
-}
-
-.portfolio-section div:hover{
-    background-color: var(--greyHoverA);
-}
 
 /*-- footer ---------------------------- */
 .main-footer{
@@ -150,7 +86,7 @@ padding-top: 84px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: baseline;
-    background-color: var(--footer);
+    background-color: var(--footerCard);
     color: #fff;
     padding: 2rem 3rem;
     text-transform: uppercase;
@@ -189,7 +125,7 @@ padding-top: 84px;
 }
 
 .footer-item__socials a{
-    color: var(--footer);
+    color: var(--footerCard);
     display: block;
     width: 35px;
     height: 35px;
@@ -201,47 +137,13 @@ padding-top: 84px;
     align-items: center;
 }
 
+/* CARD STYLE------------------------------------------------------------------------------------------*/
+.main-nav__button{
+    font-weight: 700;
+}
+
 @media(min-width:455px){
-    .header-section{
-        background-size: cover;
-    }
-
-    .portfolio-section{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: "a c c i"
-                             "p p h b";
-     }
- 
-     .portfolio-section div{
-         min-height: 150px;
-     }
-     
-     .portfolio-section a:nth-child(1){
-         grid-area: a;
-     }
-     
-     .portfolio-section a:nth-child(2){
-         grid-area: c;
-     }
- 
-     .portfolio-section a:nth-child(3){
-         grid-area: i;
-     }
-     
-     .portfolio-section a:nth-child(4){
-         grid-area: p;
-     }
- 
-     .portfolio-section a:nth-child(5){
-         grid-area: h;
-     }
-     
-     .portfolio-section a:nth-child(6){
-         grid-area: b;
-     }
-
-     .main-footer{
+    .main-footer{
         grid-template-columns: 1fr 2fr 1fr;
     }
 
@@ -270,11 +172,6 @@ padding-top: 84px;
         margin-left: auto;
         margin-right: 0;
         display: block;
-    }
-
-    .header-section{
-        background-size: cover;
-        background-position: 0% 30%;
     }
 
 }
